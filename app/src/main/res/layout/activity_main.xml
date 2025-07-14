@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/tvMasjidName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/nama_masjid"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="20:46:00"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivQuranAyat"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/quran_ayat_placeholder"
+        android:contentDescription="@string/gambar_ilustrasi_quran"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout" />
+
+    <TextView
+        android:id="@+id/tvAyatText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/contoh_ayat"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="@+id/ivQuranAyat"
+        app:layout_constraintStart_toStartOf="@+id/ivQuranAyat"
+        app:layout_constraintEnd_toEndOf="@+id/ivQuranAyat" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Selasa, 08 Juli 2025 / 12 Muharram 1447 H"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:background="#303030"
+        app:layout_constraintTop_toBottomOf="@id/ivQuranAyat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <GridLayout
+        android:id="@+id/prayerTimeGrid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:columnCount="7"
+        android:rowCount="2"
+        android:alignmentMode="alignBounds"
+        android:columnOrderPreserved="false"
+        android:padding="8dp"
+        android:background="#202020"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView style="@style/PrayerHeaderStyle" android:text="@string/imsak"/>
+        <TextView style="@style/PrayerHeaderStyle" android:text="@string/subuh"/>
+        <TextView style="@style/PrayerHeaderStyle" android:text="@string/syuruq"/>
+        <TextView style="@style/PrayerHeaderStyle" android:text="@string/dzuhur"/>
+        <TextView style="@style/PrayerHeaderStyle" android:text="@string/ashar"/>
+        <TextView style="@style/PrayerHeaderStyle" android:text="@string/maghrib"/>
+        <TextView style="@style/PrayerHeaderStyle" android:text="@string/isya"/>
+        <TextView android:id="@+id/tvImsak" style="@style/PrayerTimeStyle" tools:text="03:52"/>
+        <TextView android:id="@+id/tvSubuh" style="@style/PrayerTimeStyle" tools:text="04:02"/>
+        <TextView android:id="@+id/tvSyuruq" style="@style/PrayerTimeStyle" tools:text="05:18"/>
+        <TextView android:id="@+id/tvDzuhur" style="@style/PrayerTimeStyle" tools:text="11:32"/>
+        <TextView android:id="@+id/tvAshar" style="@style/PrayerTimeStyle" tools:text="14:46"/>
+        <TextView android:id="@+id/tvMaghrib" style="@style/PrayerTimeStyle" tools:text="17:39"/>
+        <TextView android:id="@+id/tvIsya" style="@style/PrayerTimeStyle" tools:text="18:49"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutKas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#222222"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTotalKas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Kas Masuk: Rp 0"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvPengeluaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Pengeluaran: Rp 0"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvSaldoKas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Saldo Akhir: Rp 0"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnInputKas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:contentDescription="@string/tambah_kas"
+            android:src="@android:drawable/ic_menu_add"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInfoText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#101010"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/info_shaf"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutKas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prayerTimeGrid" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

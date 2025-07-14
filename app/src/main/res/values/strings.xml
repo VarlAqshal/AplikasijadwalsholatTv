@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Jadwal Sholat TV</string>
+
+    <string name="nama_masjid">Masjid Al - Hidayah Semarang</string>
+    <string name="gambar_ilustrasi_quran">Gambar ilustrasi Al-Quran</string>
+    <string name="contoh_ayat">Sesungguhnya orang yang bodoh di antara kami selalu mengucapkan (perkataan) yang melampaui batas terhadap Allah. [QS. 72:4]</string>
+    <string name="info_shaf">Luruskan dan rapatkan shaf karena lurus dan rapatnya shaf merupakan bagian dari kesempurnaan sholat.</string>
+    <string name="tambah_kas">Tambah Kas</string>
+    <string name="imsak">IMSAK</string>
+    <string name="subuh">SUBUH</string>
+    <string name="syuruq">SYURUQ</string>
+    <string name="dzuhur">DZUHUR</string>
+    <string name="ashar">ASHAR</string>
+    <string name="maghrib">MAGHRIB</string>
+    <string name="isya">ISYA\'</string>
+
+    <string-array name="kategori_kas">
+        <item>Masuk</item>
+        <item>Keluar</item>
+    </string-array>
+</resources>
